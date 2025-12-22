@@ -147,3 +147,6 @@ async def predict(file: UploadFile = File(...)):
         "imagenEtiquetada": etiquetada_b64
     })
 
+@app.get("/")
+def health():
+    return {"status": "ok", "message": "Backend FastAPI funcionando"}
