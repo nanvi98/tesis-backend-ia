@@ -14,3 +14,15 @@ app.add_middleware(
 @app.get("/")
 def health():
     return {"status": "ok", "message": "Backend FastAPI funcionando"}
+
+@app.post("/predict")
+def predict_placeholder():
+    return {
+        "status": "ok",
+        "resultado": {
+            "clase_op": "osteoporosis",
+            "prob_op": 0.82,
+            "clase_oa": "leve-moderado",
+            "prob_oa": 0.74
+        }
+    }
